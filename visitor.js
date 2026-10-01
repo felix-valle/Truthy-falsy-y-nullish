@@ -1,30 +1,34 @@
-function createVisitor(nombre, edad, ticketId) {
+function createVisitor(name, age, ticketId) {
   return {
-    nombre: nombre,
-    edad: edad,
+    name: name,
+    age: age,
     ticketId: ticketId,
   };
 }
 
+
 function revokeTicket(visitor) {
-    visitor.ticketId = null;
-    return visitor;
+  visitor.ticketId = null;
+  return visitor;
 }
 
-function ticketstatus(tickets, tickeID){
-  if (tickets[tickeID] ===undefined) {
-    return "unknown ticket id"; 
-  } else if (tickets[tickeID] === null){
-    return "not sold";
+function ticketStatus(tickets, ticketId) {
+  if (tickets[ticketId] === undefined) {
+    return 'unknown ticket id';
+  } else if (tickets[ticketId] === null) {
+    return 'not sold';
   } else {
-    return "sold to ${tickets[ticketId]}";
+    return `sold to ${tickets[ticketId]}`;
   }
 }
+
 
 function simpleTicketStatus(tickets, ticketId) {
   return tickets[ticketId] ?? 'invalid ticket !!!';
 }
 
+
 function gtcVersion(visitor) {
   return visitor.gtc?.version;
 }
+
