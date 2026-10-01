@@ -24,6 +24,7 @@ function ticketStatus(tickets, ticketId) {
     return `sold to ${tickets[ticketId]}`;
   }
 }
+const tickets = { '0H2AZ123': null, 'FVM2006': 'Felix' };
 console.log(ticketStatus(tickets, 'FVM2006'));
 
 function simpleTicketStatus(tickets, ticketId) {
