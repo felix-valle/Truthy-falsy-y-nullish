@@ -15,6 +15,8 @@ function revokeTicket(visitor) {
 
 console.log(revokeTicket({ name: 'Felix', age: 20, ticketId: 'FVM2006' }));
 
+const tickets = { '0H2AZ123': null, 'FVM2006': 'Felix' };
+
 function ticketStatus(tickets, ticketId) {
   if (tickets[ticketId] === undefined) {
     return 'unknown ticket id';
@@ -24,7 +26,6 @@ function ticketStatus(tickets, ticketId) {
     return `sold to ${tickets[ticketId]}`;
   }
 }
-const tickets = { '0H2AZ123': null, 'FVM2006': 'Felix' };
 console.log(ticketStatus(tickets, 'FVM2006'));
 
 function simpleTicketStatus(tickets, ticketId) {
